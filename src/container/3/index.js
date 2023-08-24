@@ -1,6 +1,6 @@
 const button = document.querySelector('.form__button')
 
-// Обробник події "fullscreenchange"
+// Обробник події "fullscreenchange"алерты блокируют полноекранку, надо скрыть
 document.addEventListener('fullscreenchange', (e) => {
   console.log(e)
 
@@ -23,6 +23,12 @@ document.addEventListener('fullscreenerror', (e) => {
 
 // Обробник натискання на кнопку повноекранного режиму
 button.addEventListener('click', () => {
+  // клик на цю кнопку це вхід та вихід з повноекранного режиму
+  if (document.fullscreenElement) {
+    if (document.exitFullscreen) {
+      document.exitFullscreen()
+    }
+  }
   const body = document.documentElement
   if (body.requestFullscreen) {
     body.requestFullscreen()

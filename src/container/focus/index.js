@@ -8,13 +8,13 @@ focusInput.addEventListener('focusin', () => {
   focusMessage.style.color = 'green'
 })
 
-// Обробник події "focus"
+// Обробник події "focus"для валідацій часто
 focusInput.addEventListener('focus', () => {
   focusMessage.textContent = 'Елемент отримав фокус (focus)'
   focusMessage.style.color = 'blue'
 })
 
-// Обробник події "blur"
+// Обробник події "blur" ля валідацій часто
 focusInput.addEventListener('blur', () => {
   focusMessage.textContent = 'Елемент втратив фокус'
   focusMessage.style.color = 'red'

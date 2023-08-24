@@ -1,7 +1,7 @@
 const visibilityStatus = document.getElementById(
   'visibilityStatus',
 )
-
+// спрацьовую якщо перейти на шншу стор, зїявиться синій круг на поперед стор.
 // Обробник події "visibilitychange"
 document.addEventListener('visibilitychange', (e) => {
   console.log(e)
@@ -14,7 +14,10 @@ document.addEventListener('visibilitychange', (e) => {
   } else {
     visibilityStatus.textContent =
       'Статус видимості: Відображено'
-    alert('Стан видимості: Відображено')
+    // alert('Стан видимості: Відображено')
+
+    // якщо нас покинули - зміна колір фона
+    document.body.style.background = '#bbb'
   }
 })
 
